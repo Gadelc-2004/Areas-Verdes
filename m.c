@@ -14,6 +14,7 @@ struct imagem {
 void print_informations(struct imagem *x);
 void convertion(struct imagem *a);
 void print(struct imagem x);
+void ordenacao(struct imagem *list);
 
 int main(int argc, char *argv[]) 
 {
@@ -33,7 +34,7 @@ int main(int argc, char *argv[])
   printf("CARREGANDO ARQUIVOS JPG\n");
   while((entry = readdir(dir)) != NULL) 
   {
-    if(strstr(entry->d_name, ".jpg") != NULL)
+    if(strstr(entry->d_name, ".JPG") != NULL)
     {
       strcpy(a[i].nome, entry->d_name);
       printf("Arquivo: %s\n", a[i].nome);
@@ -118,9 +119,21 @@ void print(struct imagem x)
   printf("Nome: %s\n", x.nome);
   printf("Latitude: %s\n", x.lati);
   printf("Longitude: %s\n", x.longi);
-  printf("Latitude (int): %d | %d\n", x.latint[0], x.latint[1]);
+  /*printf("Latitude (int): %d | %d\n", x.latint[0], x.latint[1]);
   printf("Latitude (float): %f\n", x.flat);
   printf("Longitude (int): %d | %d\n", x.longiint[0], x.longiint[1]);
-  printf("Longitude (float): %f\n", x.flongi);
+  printf("Longitude (float): %f\n", x.flongi);*/
+  return;
+}
+
+void ordenacao(struct imagem *list)
+{
+  float lower, high;
+
+  for(int i = 0; i < quant; i++)
+  {
+    if(list[i].)
+  }
+
   return;
 }
